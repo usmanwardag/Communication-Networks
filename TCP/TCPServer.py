@@ -22,8 +22,10 @@ while 1:
     print 'connectionSocket is created'
 
     sentence = connectionSocket.recv(1024)
+    print 'sentence'
+
+    if (sentence == "shut down"):
+        connectionSocket.TC
     capitalizedSentence = sentence.upper()
     connectionSocket.send(capitalizedSentence)
     connectionSocket.close()
-
-print "Done"

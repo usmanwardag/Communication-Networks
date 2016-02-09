@@ -1,6 +1,6 @@
 from socket import *
 
-serverName = 'localhost'
+serverName = '192.168.1.4'
 serverPort = 12003
 
 # Create client's socket. AF_INET indicates IPV4 network.
