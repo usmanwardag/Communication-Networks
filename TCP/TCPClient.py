@@ -1,7 +1,7 @@
 from socket import *
 
 serverName = '192.168.152.1'
-serverPort = 12003
+serverPort = 80
 
 # Create client's socket. AF_INET indicates IPV4 network.
 # SOCK_STREAM that TCHP socket is being created.
