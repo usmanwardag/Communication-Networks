@@ -2,31 +2,15 @@ from socket import *
 
 serverPort = 80
 
-# Create TCP socket
-serverSocket = socket(AF_INET, SOCK_STREAM)
+serverSocket = socket(AF_INET,SOCK_STREAM)
+serverSocket.bind(('',serverPort))
 
-# Associating serverPort with socket, this serverSocket
-# is the welcome socket
-serverSocket.bind(("", serverPort))
-
-# Wait for client to send data
 serverSocket.listen(1)
 
 print 'The server is ready to receive'
-
 while 1:
-
-    # When client sends data, .accept() method is
-    # invoked and connectionSocket is created
     connectionSocket, addr = serverSocket.accept()
-    print 'connectionSocket is created'
-
     sentence = connectionSocket.recv(1024)
-    print sentence
-
-    if sentence == "shut down":
-        break
-
     capitalizedSentence = sentence.upper()
     connectionSocket.send(capitalizedSentence)
     connectionSocket.close()

@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Communication Networks.iml" filepath="$PROJECT_DIR$/.idea/Communication Networks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Vitealth/MCU/.idea/MCU.iml" filepath="$PROJECT_DIR$/../Vitealth/MCU/.idea/MCU.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Python/Python-git/.idea/Python-git.iml" filepath="$PROJECT_DIR$/../Python/Python-git/.idea/Python-git.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Robin/.idea/Robin.iml" filepath="$PROJECT_DIR$/../Robin/.idea/Robin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Vitealth/MCU/tcp_python/.idea/tcp_python.iml" filepath="$PROJECT_DIR$/../Vitealth/MCU/tcp_python/.idea/tcp_python.iml" />
     </modules>
   </component>
 </project>

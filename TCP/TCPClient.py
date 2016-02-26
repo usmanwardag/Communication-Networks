@@ -1,22 +1,22 @@
 from socket import *
+import time
 
-serverName = '192.168.152.1'
-serverPort = 80
-
-# Create client's socket. AF_INET indicates IPV4 network.
-# SOCK_STREAM that TCHP socket is being created.
-clientSocket = socket(AF_INET, SOCK_STREAM)
-
-# Initiates connection between client and server
-clientSocket.connect((serverName, serverPort))
-print 'Connection established!'
+serverIP = '192.168.43.160'
 
 sentence = raw_input('Input lowercase sentence:')
-clientSocket.send(sentence)
+start = time.time()
 
-# Wait for bytes from server
+serverPort = 80
+
+clientSocket = socket(AF_INET, SOCK_STREAM)
+clientSocket.connect((serverIP,serverPort))
+
+clientSocket.send(sentence)
 modifiedSentence = clientSocket.recv(1024)
+time_match = time.time()-start
 
 print 'From Server:', modifiedSentence
 clientSocket.close()
+
+print 'It took', time_match, 'seconds to finish ObjectMatching.'
 
